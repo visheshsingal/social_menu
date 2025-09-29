@@ -32,15 +32,13 @@
             padding-bottom: 20px;
         }
 
-        /* --- New CSS for the Logo --- */
-        .logo {
+      .logo {
             width: 150px; /* Adjust size as needed */
             height: auto;
             margin-bottom: 15px;
             border-radius: 50%; /* Makes the image circular, fitting the example logo */
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Subtle glow effect */
         }
-        /* --------------------------- */
 
         .cafe-title {
             font-size: 3em;
@@ -106,6 +104,12 @@
             font-weight: 500;
         }
 
+        .item-name span {
+            font-size: 0.9em;
+            color: #aaa;
+            margin-left: 8px;
+        }
+
         .item-price {
             font-size: 1.1em;
             color: #cccccc;
@@ -139,33 +143,117 @@
             border-left: 4px solid #888;
         }
 
+        .special-section {
+            background: rgba(136, 136, 136, 0.1);
+            border: 1px solid #666;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .entertainment-title {
+            color: #ffcc00;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .entertainment-price {
+            font-size: 1.4em;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* Updated CSS for Pizza Section */
+        .price-header {
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+            margin-bottom: 10px;
+            font-size: 1em;
+            color: #cccccc;
+            font-weight: bold;
+        }
+
+        .price-small, .price-regular, .price-large {
+            min-width: 60px;
+            text-align: right;
+        }
+
+        .multi-price-container {
+            display: flex;
+            gap: 20px;
+            font-size: 1.1em;
+            color: #cccccc;
+            font-weight: bold;
+        }
+
+        .multi-price-container .price-small,
+        .multi-price-container .price-regular,
+        .multi-price-container .price-large {
+            min-width: 60px;
+            text-align: right;
+        }
+
+        .item-name.multi-price {
+            flex: 1;
+        }
+
+        /* New Banner Section */
+        .banner-section {
+            margin-top: 40px;
+            text-align: center;
+        }
+.banner-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+
         @media (max-width: 600px) {
             .cafe-title {
                 font-size: 2.2em;
             }
-            
+
             .menu-container {
                 padding: 20px 15px;
             }
-            
+
             .menu-section {
                 padding: 20px 15px;
             }
-            
+
             .section-title {
                 font-size: 1.5em;
+            }
+
+            .price-header {
+                gap: 10px;
+                font-size: 0.9em;
+            }
+
+            .multi-price-container {
+                gap: 10px;
+                font-size: 0.9em;
+            }
+
+            .price-small, .price-regular, .price-large {
+                min-width: 50px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="menu-container">
+  <div class="menu-container">
         <div class="header">
             <img src="https://i.ibb.co/xKNT7SDR/Whats-App-Image-2025-09-29-at-12-25-13.jpg" alt="Cafe Logo" class="logo">
             <h1 class="cafe-title">CAFE MENU</h1>
             <p class="subtitle">Fresh • Delicious • Authentic</p>
         </div>
 
+        <!-- ☕ Hot Beverages Section -->
         <div class="menu-section">
             <h2 class="section-title">☕ Hot Beverages</h2>
             <div class="menu-grid">
@@ -195,16 +283,49 @@
                 </div>
             </div>
 
+            <!-- Cold Coffee Selection -->
             <div class="subsection">
                 <h3 class="subsection-title">Cold Coffee Selection</h3>
                 <div class="menu-grid">
                     <div class="menu-item">
-                        <span class="item-name">Cold Coffee (Small)</span>
-                        <span class="item-price"><span class="price-symbol">₹</span>50</span>
+                        <span class="item-name">Cold Coffee <span>(Small)</span></span>
+                        <span class="item-price"><span class="price-symbol">₹</span>49</span>
                     </div>
                     <div class="menu-item">
-                        <span class="item-name">Cold Coffee (Large)</span>
-                        <span class="item-price"><span class="price-symbol">₹</span>70</span>
+                        <span class="item-name">Cold Coffee <span>(Large)</span></span>
+                        <span class="item-price"><span class="price-symbol">₹</span>69</span>
+                    </div>
+                    <div class="menu-item special-item">
+                        <span class="item-name">Hazelnut Cold Coffee <span>(Small)</span></span>
+                        <span class="item-price"><span class="price-symbol">₹</span>59</span>
+                    </div>
+                    <div class="menu-item special-item">
+                        <span class="item-name">Hazelnut Cold Coffee <span>(Large)</span></span>
+                        <span class="item-price"><span class="price-symbol">₹</span>79</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Irish Cold Coffee <span>(Small)</span></span>
+                        <span class="item-price"><span class="price-symbol">₹</span>59</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Irish Cold Coffee <span>(Large)</span></span>
+                        <span class="item-price"><span class="price-symbol">₹</span>79</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Caramel Cold Coffee <span>(Small)</span></span>
+                        <span class="item-price"><span class="price-symbol">₹</span>59</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Caramel Cold Coffee <span>(Large)</span></span>
+                        <span class="item-price"><span class="price-symbol">₹</span>79</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Frappé <span>(Small)</span></span>
+                        <span class="item-price"><span class="price-symbol">₹</span>59</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Frappé <span>(Large)</span></span>
+                        <span class="item-price"><span class="price-symbol">₹</span>79</span>
                     </div>
                     <div class="menu-item">
                         <span class="item-name">Cold Coffee with Ice Cream</span>
@@ -213,29 +334,31 @@
                 </div>
             </div>
 
+            <!-- Refreshing Drinks -->
             <div class="subsection">
                 <h3 class="subsection-title">Refreshing Drinks</h3>
                 <div class="menu-grid">
-                    <div class="menu-item">
+                    <div class="menu-item special-item">
                         <span class="item-name">Mint Soda</span>
-                        <span class="item-price"><span class="price-symbol">₹</span>30</span>
+                        <span class="item-price"><span class="price-symbol">₹</span>69</span>
                     </div>
-                    <div class="menu-item">
+                    <div class="menu-item special-item">
                         <span class="item-name">Masala Lemon</span>
-                        <span class="item-price"><span class="price-symbol">₹</span>30</span>
+                        <span class="item-price"><span class="price-symbol">₹</span>69</span>
                     </div>
-                    <div class="menu-item">
+                    <div class="menu-item special-item">
                         <span class="item-name">Watermelon Juice</span>
-                        <span class="item-price"><span class="price-symbol">₹</span>30</span>
+                        <span class="item-price"><span class="price-symbol">₹</span>69</span>
                     </div>
-                    <div class="menu-item">
+                    <div class="menu-item special-item">
                         <span class="item-name">Apple Juice</span>
-                        <span class="item-price"><span class="price-symbol">₹</span>30</span>
+                        <span class="item-price"><span class="price-symbol">₹</span>69</span>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- 🥤 Shakes & Smoothies Section -->
         <div class="menu-section">
             <h2 class="section-title">🥤 Shakes & Smoothies</h2>
             <div class="menu-grid">
@@ -255,28 +378,28 @@
                     <span class="item-name">Mango Shake</span>
                     <span class="item-price"><span class="price-symbol">₹</span>50</span>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item special-item">
                     <span class="item-name">Oreo Shake</span>
-                    <span class="item-price"><span class="price-symbol">₹</span>50</span>
+                    <span class="item-price"><span class="price-symbol">₹</span>69</span>
                 </div>
-                <div class="menu-item">
+                <div class="menu-item special-item">
                     <span class="item-name">KitKat Shake</span>
-                    <span class="item-price"><span class="price-symbol">₹</span>60</span>
+                    <span class="item-price"><span class="price-symbol">₹</span>79</span>
                 </div>
                 <div class="menu-item special-item">
                     <span class="item-name">Black Current Shake</span>
-                    <span class="item-price"><span class="price-symbol">₹</span>60</span>
+                    <span class="item-price"><span class="price-symbol">₹</span>79</span>
                 </div>
                 <div class="menu-item special-item">
                     <span class="item-name">Milk Shake</span>
-                    <span class="item-price"><span class="price-symbol">₹</span>60</span>
+                    <span class="item-price"><span class="price-symbol">₹</span>99</span>
                 </div>
             </div>
         </div>
 
+        <!-- 🍽️ Main Courses Section -->
         <div class="menu-section">
             <h2 class="section-title">🍽️ Main Courses</h2>
-            
             <div class="subsection">
                 <h3 class="subsection-title">Sandwiches</h3>
                 <div class="menu-grid">
@@ -334,92 +457,187 @@
             </div>
         </div>
 
+        <!-- 🍕 Pizza Corner Section -->
         <div class="menu-section">
-            <h2 class="section-title">🍕 Snacks & Pizza</h2>
-            
+            <h2 class="section-title">🍕 Pizza Corner</h2>
             <div class="subsection">
-                <h3 class="subsection-title">Pizza Selection</h3>
+                <h3 class="subsection-title">Exotica Pizza <span>(Small 7" / Regular 10" / Large 13")</span></h3>
+                <div class="price-header">
+                    <div class="price-small">S (7")</div>
+                    <div class="price-regular">R (10")</div>
+                    <div class="price-large">L (13")</div>
+                </div>
                 <div class="menu-grid">
-                    <div class="menu-item">
-                        <span class="item-name">Fried Juju</span>
-                        <span class="item-price"><span class="price-symbol">₹</span>59</span>
+                    <div class="menu-item special-item">
+                        <span class="item-name multi-price">Veg Supreme Pizza <span>(Onion, Capsicum, Tomato, Mushroom, Jalapenos, Black Olive & Sweet Corn with extra cheese)</span></span>
+                        <div class="multi-price-container">
+                            <div class="price-small"><span class="price-symbol">₹</span>210</div>
+                            <div class="price-regular"><span class="price-symbol">₹</span>330</div>
+                            <div class="price-large"><span class="price-symbol">₹</span>550</div>
+                        </div>
                     </div>
-                    <div class="menu-item">
-                        <span class="item-name">Pav Pav</span>
-                        <span class="item-price"><span class="price-symbol">₹</span>79</span>
-                    </div>
-                    <div class="menu-item">
-                        <span class="item-name">Cheese Loaded</span>
-                        <span class="item-price"><span class="price-symbol">₹</span>89</span>
+                    <div class="menu-item special-item">
+                        <span class="item-name multi-price">Veg Wonder Pizza <span>(Mushroom, Sweet Corn, Red Paprika & Paneer with extra cheese)</span></span>
+                        <div class="multi-price-container">
+                            <div class="price-small"><span class="price-symbol">₹</span>210</div>
+                            <div class="price-regular"><span class="price-symbol">₹</span>330</div>
+                            <div class="price-large"><span class="price-symbol">₹</span>550</div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="subsection">
-                <h3 class="subsection-title">Burgers & Wraps</h3>
+                <h3 class="subsection-title">Classic Pizza <span>(Small 7" / Regular 10" / Large 13")</span></h3>
+                <div class="price-header">
+                    <div class="price-small">S (7")</div>
+                    <div class="price-regular">R (10")</div>
+                    <div class="price-large">L (13")</div>
+                </div>
                 <div class="menu-grid">
                     <div class="menu-item">
-                        <span class="item-name">Aloo Tikki Burger</span>
-                        <span class="item-price"><span class="price-symbol">₹</span>89</span>
+                        <span class="item-name multi-price">Margherita Pizza <span>(Double Cheese)</span></span>
+                        <div class="multi-price-container">
+                            <div class="price-small"><span class="price-symbol">₹</span>130</div>
+                            <div class="price-regular"><span class="price-symbol">₹</span>250</div>
+                            <div class="price-large"><span class="price-symbol">₹</span>400</div>
+                        </div>
                     </div>
                     <div class="menu-item">
-                        <span class="item-name">Veg Burger</span>
-                        <span class="item-price"><span class="price-symbol">₹</span>59</span>
+                        <span class="item-name multi-price">Fresh Veggie Pizza</span>
+                        <div class="multi-price-container">
+                            <div class="price-small"><span class="price-symbol">₹</span>130</div>
+                            <div class="price-regular"><span class="price-symbol">₹</span>250</div>
+                            <div class="price-large"><span class="price-symbol">₹</span>400</div>
+                        </div>
                     </div>
                     <div class="menu-item">
-                        <span class="item-name">Paneer Patty</span>
-                        <span class="item-price"><span class="price-symbol">₹</span>99</span>
+                        <span class="item-name multi-price">Country Delight Pizza</span>
+                        <div class="multi-price-container">
+                            <div class="price-small"><span class="price-symbol">₹</span>130</div>
+                            <div class="price-regular"><span class="price-symbol">₹</span>250</div>
+                            <div class="price-large"><span class="price-symbol">₹</span>400</div>
+                        </div>
                     </div>
                     <div class="menu-item">
-                        <span class="item-name">Double Patty</span>
+                        <span class="item-name multi-price">Farm Fresh Pizza <span>(Onion, Capsicum, Mushroom)</span></span>
+                        <div class="multi-price-container">
+                            <div class="price-small"><span class="price-symbol">₹</span>130</div>
+                            <div class="price-regular"><span class="price-symbol">₹</span>250</div>
+                            <div class="price-large"><span class="price-symbol">₹</span>400</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">Zesty Veggie Pizza <span>(Small 7" / Regular 10" / Large 13")</span></h3>
+                <div class="price-header">
+                    <div class="price-small">S (7")</div>
+                    <div class="price-regular">R (10")</div>
+                    <div class="price-large">L (13")</div>
+                </div>
+                <div class="menu-grid">
+                    <div class="menu-item special-item">
+                        <span class="item-name multi-price">Spicy Paneer Pizza <span>(Paneer, Capsicum, Red Paprika)</span></span>
+                        <div class="multi-price-container">
+                            <div class="price-small"><span class="price-symbol">₹</span>150</div>
+                            <div class="price-regular"><span class="price-symbol">₹</span>350</div>
+                            <div class="price-large"><span class="price-symbol">₹</span>500</div>
+                        </div>
+                    </div>
+                    <div class="menu-item special-item">
+                        <span class="item-name multi-price">Veggie Deluxe Pizza <span>(Onion, Capsicum, Sweet Corn, Paneer, Mushroom)</span></span>
+                        <div class="multi-price-container">
+                            <div class="price-small"><span class="price-symbol">₹</span>150</div>
+                            <div class="price-regular"><span class="price-symbol">₹</span>350</div>
+                            <div class="price-large"><span class="price-symbol">₹</span>500</div>
+                        </div>
+                    </div>
+                    <div class="menu-item special-item">
+                        <span class="item-name multi-price">Veg Mexican Pizza <span>(Paneer, Capsicum, Red Paprika)</span></span>
+                        <div class="multi-price-container">
+                            <div class="price-small"><span class="price-symbol">₹</span>150</div>
+                            <div class="price-regular"><span class="price-symbol">₹</span>350</div>
+                            <div class="price-large"><span class="price-symbol">₹</span>500</div>
+                        </div>
+                    </div>
+                    <div class="menu-item special-item">
+                        <span class="item-name multi-price">Veg Italian Pizza <span>(Jalapeno, Black Olive, Sweet Corn)</span></span>
+                        <div class="multi-price-container">
+                            <div class="price-small"><span class="price-symbol">₹</span>150</div>
+                            <div class="price-regular"><span class="price-symbol">₹</span>350</div>
+                            <div class="price-large"><span class="price-symbol">₹</span>500</div>
+                        </div>
+                    </div>
+                    <div class="menu-item special-item">
+                        <span class="item-name multi-price">Hot & Shot Pizza <span>(Jalapeno, Red Paprika, Capsicum)</span></span>
+                        <div class="multi-price-container">
+                            <div class="price-small"><span class="price-symbol">₹</span>150</div>
+                            <div class="price-regular"><span class="price-symbol">₹</span>350</div>
+                            <div class="price-large"><span class="price-symbol">₹</span>500</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">Veg Single Pizza</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <span class="item-name">Onion Pizza</span>
                         <span class="item-price"><span class="price-symbol">₹</span>69</span>
                     </div>
                     <div class="menu-item">
-                        <span class="item-name">Corn Wrap</span>
-                        <span class="item-price"><span class="price-symbol">₹</span>59</span>
+                        <span class="item-name">Capsicum Pizza</span>
+                        <span class="item-price"><span class="price-symbol">₹</span>69</span>
                     </div>
                     <div class="menu-item">
-                        <span class="item-name">Aloo Tikki Wrap</span>
+                        <span class="item-name">Tomato Pizza</span>
+                        <span class="item-price"><span class="price-symbol">₹</span>69</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Corn Pizza</span>
                         <span class="item-price"><span class="price-symbol">₹</span>79</span>
                     </div>
                     <div class="menu-item">
-                        <span class="item-name">Paneer Veggie Wrap</span>
+                        <span class="item-name">Paneer Pizza</span>
                         <span class="item-price"><span class="price-symbol">₹</span>89</span>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- 🇮🇳 Indian Specialties Section -->
         <div class="menu-section">
             <h2 class="section-title">🇮🇳 Indian Specialties</h2>
-            
             <div class="subsection">
-                <h3 class="subsection-title">Dosa Varieties</h3>
+                <h3 class="subsection-title">Dosa Varieties <span>(+₹10 Price Increase)</span></h3>
                 <div class="menu-grid">
-                    <div class="menu-item">
+                    <div class="menu-item special-item">
                         <span class="item-name">Plain Dosa</span>
-                        <span class="item-price"><span class="price-symbol">₹</span>49</span>
+                        <span class="item-price"><span class="price-symbol">₹</span>59</span>
                     </div>
-                    <div class="menu-item">
+                    <div class="menu-item special-item">
                         <span class="item-name">Butter Dosa</span>
+                        <span class="item-price"><span class="price-symbol">₹</span>89</span>
+                    </div>
+                    <div class="menu-item special-item">
+                        <span class="item-name">Masala Dosa</span>
                         <span class="item-price"><span class="price-symbol">₹</span>79</span>
                     </div>
-                    <div class="menu-item">
-                        <span class="item-name">Masala Dosa</span>
-                        <span class="item-price"><span class="price-symbol">₹</span>69</span>
-                    </div>
-                    <div class="menu-item">
+                    <div class="menu-item special-item">
                         <span class="item-name">Cheese Dosa</span>
-                        <span class="item-price"><span class="price-symbol">₹</span>99</span>
+                        <span class="item-price"><span class="price-symbol">₹</span>109</span>
                     </div>
                 </div>
             </div>
 
             <div class="subsection">
-                <h3 class="subsection-title">Idli & More</h3>
+                <h3 class="subsection-title">Idli & Uttapam</h3>
                 <div class="menu-grid">
                     <div class="menu-item">
-                        <span class="item-name">Plain Idli (2 Pcs)</span>
+                        <span class="item-name">Plain Idli <span>(2 Pcs)</span></span>
                         <span class="item-price"><span class="price-symbol">₹</span>49</span>
                     </div>
                     <div class="menu-item">
@@ -427,30 +645,12 @@
                         <span class="item-price"><span class="price-symbol">₹</span>59</span>
                     </div>
                     <div class="menu-item">
-                        <span class="item-name">Uttapam</span>
+                        <span class="item-name">Uttapam - Onion</span>
                         <span class="item-price"><span class="price-symbol">₹</span>79</span>
                     </div>
-                </div>
-            </div>
-
-            <div class="subsection">
-                <h3 class="subsection-title">Hotdogs & More</h3>
-                <div class="menu-grid">
-                    <div class="menu-item">
-                        <span class="item-name">Veg Hotdogs</span>
-                        <span class="item-price"><span class="price-symbol">₹</span>50</span>
-                    </div>
-                    <div class="menu-item">
-                        <span class="item-name">Paneer Hotdogs</span>
-                        <span class="item-price"><span class="price-symbol">₹</span>60</span>
-                    </div>
-                    <div class="menu-item">
-                        <span class="item-name">Fried Hotdogs</span>
-                        <span class="item-price"><span class="price-symbol">₹</span>60</span>
-                    </div>
                     <div class="menu-item special-item">
-                        <span class="item-name">Paneer Fried</span>
-                        <span class="item-price"><span class="price-symbol">₹</span>80</span>
+                        <span class="item-name">Uttapam - Tomato</span>
+                        <span class="item-price"><span class="price-symbol">₹</span>99</span>
                     </div>
                 </div>
             </div>
@@ -486,34 +686,112 @@
             </div>
         </div>
 
+        <!-- 🥗 Light Bites Section -->
         <div class="menu-section">
-            <h2 class="section-title">🥗 Light Bites</h2>
-            <div class="menu-grid">
-                <div class="menu-item">
-                    <span class="item-name">Corn Calzone</span>
-                    <span class="item-price"><span class="price-symbol">₹</span>59</span>
+            <h2 class="section-title">🥗 Light Bites & Sides</h2>
+            <div class="subsection">
+                <h3 class="subsection-title">Calzone Bites</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <span class="item-name">Corn Calzone</span>
+                        <span class="item-price"><span class="price-symbol">₹</span>59</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Veggie Calzone</span>
+                        <span class="item-price"><span class="price-symbol">₹</span>69</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Paneer Calzone</span>
+                        <span class="item-price"><span class="price-symbol">₹</span>79</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Cheese Calzone</span>
+                        <span class="item-price"><span class="price-symbol">₹</span>89</span>
+                    </div>
                 </div>
-                <div class="menu-item">
-                    <span class="item-name">Veggie Calzone</span>
-                    <span class="item-price"><span class="price-symbol">₹</span>69</span>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">Steamed & Fried Momos</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <span class="item-name">Veg Momos <span>(Half Plate/5 Pcs)</span></span>
+                        <span class="item-price"><span class="price-symbol">₹</span>30</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Veg Momos <span>(Full Plate/10 Pcs)</span></span>
+                        <span class="item-price"><span class="price-symbol">₹</span>50</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Fried Veg Momos <span>(Half Plate/5 Pcs)</span></span>
+                        <span class="item-price"><span class="price-symbol">₹</span>40</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Fried Veg Momos <span>(Full Plate/10 Pcs)</span></span>
+                        <span class="item-price"><span class="price-symbol">₹</span>60</span>
+                    </div>
+                    <div class="menu-item special-item">
+                        <span class="item-name">Paneer Momos <span>(Half Plate/5 Pcs)</span></span>
+                        <span class="item-price"><span class="price-symbol">₹</span>50</span>
+                    </div>
+                    <div class="menu-item special-item">
+                        <span class="item-name">Paneer Momos <span>(Full Plate/10 Pcs)</span></span>
+                        <span class="item-price"><span class="price-symbol">₹</span>70</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Fried Paneer Momos <span>(Half Plate/5 Pcs)</span></span>
+                        <span class="item-price"><span class="price-symbol">₹</span>60</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Fried Paneer Momos <span>(Full Plate/10 Pcs)</span></span>
+                        <span class="item-price"><span class="price-symbol">₹</span>80</span>
+                    </div>
                 </div>
-                <div class="menu-item">
-                    <span class="item-name">Paneer Calzone</span>
-                    <span class="item-price"><span class="price-symbol">₹</span>79</span>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">Fries & Potatoes</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <span class="item-name">French Fries</span>
+                        <span class="item-price"><span class="price-symbol">₹</span>69</span>
+                    </div>
+                    <div class="menu-item special-item">
+                        <span class="item-name">Fries with Dip</span>
+                        <span class="item-price"><span class="price-symbol">₹</span>89</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Potato Nuggets</span>
+                        <span class="item-price"><span class="price-symbol">₹</span>9</span>
+                    </div>
+                    <div class="menu-item special-item">
+                        <span class="item-name">Corn Crunchy</span>
+                        <span class="item-price"><span class="price-symbol">₹</span>110</span>
+                    </div>
                 </div>
-                <div class="menu-item">
-                    <span class="item-name">Cheese Calzone</span>
-                    <span class="item-price"><span class="price-symbol">₹</span>89</span>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">Extra Dips</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <span class="item-name">Spice Dip</span>
+                        <span class="item-price"><span class="price-symbol">₹</span>20</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Achari Dip</span>
+                        <span class="item-price"><span class="price-symbol">₹</span>20</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name">Cheese Dip</span>
+                        <span class="item-price"><span class="price-symbol">₹</span>20</span>
+                    </div>
                 </div>
             </div>
 
             <div class="subsection">
                 <h3 class="subsection-title">Sweet Treats</h3>
                 <div class="menu-grid">
-                    <div class="menu-item">
-                        <span class="item-name">Starbell</span>
-                        <span class="item-price"><span class="price-symbol">₹</span>99</span>
-                    </div>
                     <div class="menu-item">
                         <span class="item-name">Chilli Potato</span>
                         <span class="item-price"><span class="price-symbol">₹</span>149</span>
@@ -529,6 +807,28 @@
                 </div>
             </div>
         </div>
+
+        <!-- 🎱 Entertainment Section -->
+        <div class="menu-section special-section">
+            <h2 class="section-title entertainment-title">🎱 Entertainment</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <span class="item-name">8 Ball Pool <span>(Per Hour)</span></span>
+                    <span class="item-price entertainment-price"><span class="price-symbol">₹</span>250</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Banner Section -->
+    <!-- Banner Section -->
+<!-- Banner Section -->
+<div class="banner-section">
+  <img src="https://i.ibb.co/s9NsZgpR/Whats-App-Image-2025-09-29-at-16-54-29.jpg" 
+       alt="Cafe Banner" 
+       class="banner-image">
+</div>
+
+
     </div>
 </body>
 </html>
